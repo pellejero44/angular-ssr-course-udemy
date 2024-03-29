@@ -7,13 +7,19 @@ import { AsyncPipe } from '@angular/common';
 import { CoursesCardListComponent } from '../courses-card-list/courses-card-list.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { Title } from '@angular/platform-browser';
+import { AppShellNoRenderDirective } from '../directis/app-shel-no-render.directive';
 
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [MatTabsModule, CoursesCardListComponent, AsyncPipe],
+  imports: [
+    MatTabsModule,
+    CoursesCardListComponent,
+    AsyncPipe,
+    AppShellNoRenderDirective,
+  ],
 })
 export class HomeComponent implements OnInit {
   private readonly title = inject(Title);

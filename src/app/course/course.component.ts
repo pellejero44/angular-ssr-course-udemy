@@ -7,13 +7,19 @@ import { Lesson } from '../model/lesson';
 import { Meta, Title } from '@angular/platform-browser';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgIf } from '@angular/common';
+import { AppShellNoRenderDirective } from '../directis/app-shel-no-render.directive';
 
 @Component({
   selector: 'course',
   templateUrl: './course.component.html',
   styleUrls: ['./course.component.scss'],
   standalone: true,
-  imports: [NgIf, MatProgressSpinnerModule, MatTableModule],
+  imports: [
+    NgIf,
+    MatProgressSpinnerModule,
+    MatTableModule,
+    AppShellNoRenderDirective,
+  ],
 })
 export class CourseComponent implements OnInit {
   private readonly title = inject(Title);
