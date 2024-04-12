@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:dev": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,7 +12,9 @@
     "dev:ssr": "ng run angular-ssr:serve-ssr",
     "serve:ssr": "node dist/angular-ssr/server/main.js",
     "build:ssr": "ng build && ng run angular-ssr:server",
-    "prerender": "ng run angular-ssr:prerender"
+    "prerender": "ng run angular-ssr:prerender",
+    "prepare": "npm run  build:ssr",
+    "start": "npm run serve:ssr"
   },
   "private": true,
   "dependencies": {
